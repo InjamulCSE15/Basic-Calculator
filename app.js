@@ -2,6 +2,7 @@ var calculateBtn = document.querySelector('#calculateBtn');
 var resetBtn = document.querySelector('#reset');
 var outputCard = document.querySelector('#outputCard');
 var output = document.querySelector('#output');
+var Result = document.querySelector('#result');
 
 let calculate = () => {
     let operation = document.querySelector('#operation').value;
@@ -40,7 +41,7 @@ let calculate = () => {
     }
     outputCard.classList.remove('d-none');
     resetBtn.classList.remove('d-none');
-    document.querySelector('#result').innerText = parseFloat(result).toFixed(2);
+    Result.innerText = parseFloat(result).toFixed(2);
 }
 
 let reset = () => {
@@ -49,7 +50,6 @@ let reset = () => {
     operation.value = 'add';
     firstNum.value ='';
     secondNum.value = '';
-    var result = 0.00;
 }
 
 resetBtn.addEventListener('click', reset);
