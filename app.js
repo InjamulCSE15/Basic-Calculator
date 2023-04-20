@@ -54,3 +54,8 @@ let reset = () => {
 
 resetBtn.addEventListener('click', reset);
 calculateBtn.addEventListener('click', calculate);
+
+// Dynamic year:
+var projectYear = document.getElementById('projectYear');
+let copyrightYear =  new Date().getFullYear();
+projectYear.innerText = copyrightYear;
